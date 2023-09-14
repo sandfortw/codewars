@@ -12,16 +12,19 @@
 
 
 
-var number = function(busStops){
-  let count = 0;
-  busStops.forEach(
-    (stop) => {
-      count+= stop[0]; 
-      count -= stop[1];
-    }
-  );
-  return count;
-};
+// var number = function(busStops){
+//   let count = 0;
+//   busStops.forEach(
+//     (stop) => {
+//       count+= stop[0]; 
+//       count -= stop[1];
+//     }
+//   );
+//   return count;
+// };
+
+let number = (busStops) => busStops.reduce((total, [on, off]) => total + on - off, 0)
+
 
 // Should be 5
 console.log(number([[10,0],[3,5],[5,8]]))
