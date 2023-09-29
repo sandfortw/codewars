@@ -46,6 +46,7 @@ class TestNextSmaller(unittest.TestCase):
         self.assertEqual(next_smaller(123456789), -1)
         self.assertEqual(next_smaller(1234567908), 1234567890)
         self.assertEqual(next_smaller(100), -1)
+        self.assertEqual(next_smaller(1207), 1072)
 
 if __name__ == '__main__':
     unittest.main()
